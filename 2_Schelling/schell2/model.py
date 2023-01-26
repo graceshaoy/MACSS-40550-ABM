@@ -58,7 +58,7 @@ class SegModel(Model):
 
             agent = SegAgent(i, self, self.agent_type)
             self.schedule.add(agent)
-            self.grid.position_agent(agent, (x, y))
+            self.grid.place_agent(agent, self.grid.find_empty())
 
         self.running = True  # need this for batch runner
 

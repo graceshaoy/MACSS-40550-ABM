@@ -29,6 +29,7 @@ class BoidFlockers(mesa.Model):
         cohere=0.025,
         separate=0.25,
         match=0.04,
+        shyness=1,
         jiggle = jiggle,
         use_seed_10 = use_seed_10
         ):
@@ -49,6 +50,7 @@ class BoidFlockers(mesa.Model):
         self.speed = speed
         self.separation = separation
         self.jiggle = jiggle
+        self.shyness = shyness,
         self.use_seed_10 = use_seed_10
         if self.use_seed_10: 
             mesa.Model.reset_randomizer(self, seed=10), #allows us to all run similar simulations

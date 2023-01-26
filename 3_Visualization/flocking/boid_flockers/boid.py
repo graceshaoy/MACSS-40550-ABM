@@ -114,7 +114,7 @@ class Boid(mesa.Agent):
 
         self.velocity += (
             self.cohere(neighbors) * self.cohere_factor
-            + self.separate(neighbors) * self.separate_factor
+            + self.separate(neighbors) * self.separate_factor * np.log(len(neighbors))
             + self.match_heading(neighbors) * self.match_factor
         ) / 2
         self.velocity /= np.linalg.norm(self.velocity)

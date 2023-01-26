@@ -25,6 +25,7 @@ model_params = {
     "vision": UserParam.Slider("Vision", 10, 0, 25, 1),
     "separation": UserParam.Slider("Separation", 1.2, 0, 2, 0.05),
     "cohere": UserParam.Slider("Cohesion", 0.8, 0, 4, 0.1),
+    "shyness":UserParam.Slider("Shyness",0.5,0,1,0.05),
     "jiggle": UserParam.Checkbox("Jiggle Points", True ),
     "use_seed_10": UserParam.Checkbox("Set seed to 10?", True )
 }
